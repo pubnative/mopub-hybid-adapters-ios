@@ -37,7 +37,7 @@ pod 'MoPub-HyBid-Adapters', '0.1.0'
 
 1. Integrate latest version of HyBid iOS SDK to your project using [HyBid Setup Guide](https://github.com/pubnative/pubnative-hybid-ios-sdk/wiki/Setup-HyBid).
 2. If needed, implement [MoPub iOS SDK](https://developers.mopub.com/docs/ios/) in your application.
-3. Download the desired release of [`MoPub HyBid Adapters`](https://github.com/pubnative/mopub-hybid-adapters-ios/releases).
+3. Download the desired release of [MoPub HyBid Adapters](https://github.com/pubnative/mopub-hybid-adapters-ios/releases).
 4. Drag & Drop adapter files in your iOS project.
 5. Based on your needs, define custom events using [Header Bidding](https://github.com/pubnative/pubnative-hybid-ios-sdk/wiki/Setup-MoPub) and/or [Mediation](https://github.com/pubnative/pubnative-hybid-ios-sdk/wiki/MoPub-Mediation) pages to finish the integration.
 6. You’re done.
