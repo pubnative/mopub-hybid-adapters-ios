@@ -38,7 +38,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, '10.0'
   spec.source       = { :git => "https://github.com/pubnative/mopub-hybid-adapters-ios.git", :branch => "master" }
 
-  spec.source_files = 'MoPub Adapters/**/*.{swift,h,m}'
+  spec.source_files = 'MoPubAdapters/**/*.{swift,h,m}'
   spec.static_framework = true
 
   spec.pod_target_xcconfig      = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 arm64e armv7 armv7s', 'EXCLUDED_ARCHS[sdk=iphoneos*]' => 'i386 x86_64' }
