@@ -36,7 +36,7 @@ Pod::Spec.new do |spec|
 
   spec.authors      = { "Can Soykarafakili" => "can.soykarafakili@pubnative.net", "Eros Garcia Ponte" => "eros.ponte@pubnative.net", "Fares Benhamouda" => "fares.benhamouda@pubnative.net", "Orkhan Alizada" => "orkhan.alizada@pubnative.net"  }
   spec.platform     = :ios, '10.0'
-  spec.source       = { :git => "https://github.com/pubnative/mopub-hybid-adapters-ios.git", :branch => "master-moPubAdapters" }
+  spec.source       = { :git => "https://github.com/pubnative/mopub-hybid-adapters-ios.git", :branch => "master" }
 
   spec.source_files = 'MoPub Adapters/**/*.{swift,h,m}'
   spec.static_framework = true
