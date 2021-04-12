@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "MoPub-HyBid-Adapters"
-  spec.version      = "2.4.1.0"
+  spec.version      = "2.4.1.1"
   spec.summary      = "HyBid iOS SDK Adapters (Header Bidding & Mediation) for MoPub"
   spec.description = <<-DESC
                      Supported ad formats:
@@ -36,7 +36,7 @@ Pod::Spec.new do |spec|
 
   spec.authors      = { "Can Soykarafakili" => "can.soykarafakili@pubnative.net", "Eros Garcia Ponte" => "eros.ponte@pubnative.net", "Fares Benhamouda" => "fares.benhamouda@pubnative.net", "Orkhan Alizada" => "orkhan.alizada@pubnative.net"  }
   spec.platform     = :ios, '10.0'
-  spec.source       = { :git => "https://github.com/pubnative/mopub-hybid-adapters-ios.git", :tag => "2.4.1.0" }
+  spec.source       = { :git => "https://github.com/pubnative/mopub-hybid-adapters-ios.git", :tag => "2.4.1.1" }
 
   spec.source_files = 'MoPubAdapters/**/*.{swift,h,m}'
   spec.static_framework = true
