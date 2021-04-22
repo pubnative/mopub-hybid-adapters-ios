@@ -1,5 +1,5 @@
 //
-//  Copyright © 2018 PubNative. All rights reserved.
+//  Copyright © 2020 PubNative. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -20,10 +20,10 @@
 //  THE SOFTWARE.
 //
 
-#import "HyBidMoPubHeaderBiddingBannerCustomEvent.h"
+#import "HyBidMoPubHeaderBiddingMRectVideoCustomEvent.h"
 #import "HyBidMoPubUtils.h"
 
-@interface HyBidMoPubHeaderBiddingBannerCustomEvent () <HyBidAdPresenterDelegate>
+@interface HyBidMoPubHeaderBiddingMRectVideoCustomEvent () <HyBidAdPresenterDelegate>
 
 @property (nonatomic, strong) HyBidAdPresenter *adPresenter;
 @property (nonatomic, strong) HyBidBannerPresenterFactory *bannerPresenterFactory;
@@ -31,7 +31,7 @@
 
 @end
 
-@implementation HyBidMoPubHeaderBiddingBannerCustomEvent
+@implementation HyBidMoPubHeaderBiddingMRectVideoCustomEvent
 
 - (void)dealloc {
     self.adPresenter = nil;
@@ -46,6 +46,13 @@
             [self invokeFailWithMessage:[NSString stringWithFormat:@"Could not find an ad in the cache for zone id with key: %@", [HyBidMoPubUtils zoneID:info]]];
             return;
         }
+        
+        if (self.ad.vast != nil) {
+            self.ad.adType = kHyBidAdTypeVideo;
+        } else {
+            self.ad.adType = kHyBidAdTypeHTML;
+        }
+        
         self.bannerPresenterFactory = [[HyBidBannerPresenterFactory alloc] init];
         self.adPresenter = [self.bannerPresenterFactory createAdPresenterWithAd:self.ad withDelegate:self];
         if (!self.adPresenter) {
@@ -95,7 +102,7 @@
 
 - (void)adPresenterDidStartPlaying:(HyBidAdPresenter *)adPresenter
 {
-    MPLogEvent([MPLogEvent adShowSuccess]);                
+    MPLogEvent([MPLogEvent adShowSuccess]);
 }
 
 @end
