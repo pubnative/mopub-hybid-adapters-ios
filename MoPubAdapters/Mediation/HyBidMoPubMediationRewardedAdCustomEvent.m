@@ -72,7 +72,7 @@
 #pragma mark - HyBidRewardedAdDelegate
 
 - (void)onReward {
-    MPReward *reward = [[MPReward alloc] initWithCurrencyType:@"hybid_reward" amount:0];
+    MPReward *reward = [[MPReward alloc] initWithCurrencyType:@"hybid_reward" amount:[NSNumber numberWithInt:0]];
     [self.delegate fullscreenAdAdapter:self willRewardUser:reward];
     MPLogEvent([MPLogEvent adShouldRewardUserWithReward:reward]);
 }
